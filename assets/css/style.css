@@ -176,18 +176,11 @@ html[dir="rtl"] .btn:hover .icon { transform: scaleX(-1) translateX(3px); }
   flex-shrink: 0;
 }
 .brand-mark {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  border: 1px solid var(--accent-light);
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: var(--accent-light);
+  width: 40px;
+  height: auto;
+  object-fit: contain;
   flex-shrink: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(226, 168, 112, 0.18), transparent 70%);
+  display: block;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 .brand-ar { font-size: 0.8rem; color: var(--muted-light); font-family: var(--font-ar-sans); }
@@ -736,7 +729,7 @@ html[lang="ar"] .governance-label { font-family: var(--font-ar-serif); }
   color: var(--cream);
 }
 .footer-brand .brand-mark {
-  width: 34px; height: 34px; font-size: 1.2rem;
+  width: 32px; height: auto;
 }
 .footer-brand .brand-en { font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 700; }
 .footer-text {
