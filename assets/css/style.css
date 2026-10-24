@@ -643,35 +643,29 @@ html[lang="ar"] .governance-label { font-family: var(--font-ar-serif); }
 
 .clients-block { margin-top: 80px; }
 .clients-subhead { font-size: 1.35rem; margin-bottom: 6px; }
-.clients-caption { color: var(--muted); font-size: 0.92rem; margin-bottom: 32px; }
-.client-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.client-logo-tile {
+.clients-caption { color: var(--muted); font-size: 0.92rem; margin-bottom: 36px; }
+.clients-panel {
   background: var(--cream);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
+  padding: 48px 44px;
+  box-shadow: var(--shadow-soft);
+}
+.client-logo-grid {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 22px 20px;
-  min-height: 92px;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  gap: 40px 64px;
 }
-.client-logo-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
-.client-logo-tile img {
-  max-height: 42px;
+.client-logo-grid img {
+  max-height: 46px;
   width: auto;
-  max-width: 100%;
+  max-width: 150px;
   object-fit: contain;
-  filter: grayscale(0.25);
-  opacity: 0.88;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s var(--ease);
 }
-.client-logo-tile:hover img { filter: grayscale(0); opacity: 1; }
-.client-logo-tile img.logo-invert { filter: invert(1) grayscale(0.25); }
-.client-logo-tile:hover img.logo-invert { filter: invert(1) grayscale(0); }
+.client-logo-grid img:hover { transform: translateY(-3px); }
+.client-logo-grid img.logo-invert { filter: invert(1); }
 
 /* ---------- Contact ---------- */
 .contact-grid {
@@ -786,7 +780,8 @@ html[dir="rtl"] .footer-text { align-items: flex-start; }
   .triad-grid, .value-grid, .method-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .sector-grid { grid-template-columns: repeat(3, 1fr); }
-  .client-logo-grid { grid-template-columns: repeat(3, 1fr); }
+  .clients-panel { padding: 36px 28px; }
+  .client-logo-grid { gap: 32px 40px; }
   .stat-row { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
 }
 
@@ -821,7 +816,9 @@ html[dir="rtl"] .footer-text { align-items: flex-start; }
   .nav-cta { display: none; }
   .services-grid { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: repeat(2, 1fr); }
-  .client-logo-grid { grid-template-columns: repeat(2, 1fr); }
+  .clients-panel { padding: 28px 20px; }
+  .client-logo-grid { gap: 28px 32px; }
+  .client-logo-grid img { max-height: 38px; }
   .to-top { width: 42px; height: 42px; inset-block-end: 18px; inset-inline-end: 18px; }
 }
 
